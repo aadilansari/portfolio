@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aadil Ansari - Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0a192f;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(90deg, rgba(10, 25, 47, 1) 60%, rgba(10, 25, 47, 0) 100%);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .accent-text {
+            color: #64ffda;
+        }
+
+        .btn-primary {
+            background-color: transparent;
+            border: 2px solid #64ffda;
+            color: #64ffda;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: rgba(100, 255, 218, 0.1);
+        }
+
+        .social-icon {
+            color: #64ffda;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            transform: translateY(-3px);
+        }
+
+        .nav-link {
+            color: #8892b0;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #64ffda;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #64ffda;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 50;
+        }
+
+        section {
+            padding-top: 80px;
+            /* Adjust to match nav height */
+        }
+
+        .hero-section {
+            padding-top: 100px;
+            /* Additional spacing for hero section */
+        }
+
+      
+        .bg-dark {
+    background-color: #112240;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #64ffda;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Card styles */
+.card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 0.6s ease-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.card ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+
+.card li {
+    margin-bottom: 0.5rem;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .card {
+        padding: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+}
+    </style>
+    
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-opacity-90 bg-[#0a192f] backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="#" class="logo">Aadil.</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#experience" class="nav-link">Experience</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative min-h-screen flex items-center hero-section">
+        <div class="hero-gradient"></div>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 hero-content">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-5xl lg:text-6xl font-bold mb-4">
+                        Hi, I'm Aadil Ansari
+                    </h1>
+                    <h2 class="text-2xl lg:text-3xl accent-text mb-6">
+                        Mobile & Frontend Developer
+                    </h2>
+                    <p class="text-gray-400 mb-8 max-w-lg">
+                        Passionate mobile developer with 6 years of experience in designing, building, and
+                        maintaining high-quality apps. Specializing in Flutter development with a proven track
+                        record in delivering robust Android and iOS applications.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="btn-primary px-8 py-3 rounded-md font-medium">
+                            Hire Me
+                        </a>
+                        <a href="#projects" class="btn-primary px-8 py-3 rounded-md font-medium">
+                            My Work
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden lg:block">
+                    <img src="/api/placeholder/600/800" alt="Profile" class="rounded-lg object-cover w-full h-full" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold accent-text mb-6">About Me</h2>
+            <p>
+                Hello! I'm a Sr. Software Engineer with expertise in crafting seamless user experiences across
+                mobile and web platforms. With a strong foundation in Flutter, I have delivered projects ranging from
+                banking apps to social platforms, ensuring quality and scalability at every step.
+            </p>
+        </div>
+    </section>
+
+    <section id="education" class="py-20 bg-[#112240]">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold accent-text mb-6 text-white">Education</h2>
+            <div class="space-y-8">
+                <!-- Education Card 1 -->
+                <div class="flex justify-center animate-fadeIn">
+                    <div
+                        class="bg-white/30 backdrop-blur-lg p-6 rounded-lg shadow-xl w-full sm:w-3/4 lg:w-1/2 border border-white/20">
+                        <h3 class="text-xl font-semibold text-white">MASTER OF ENGINEERING | COMPUTER ENGINEERING | 2016
+                        </h3>
+                        <p class="text-white">RCPIT SHIRPUR | 66.70%</p>
+                    </div>
+                </div>
+    
+                <!-- Education Card 2 -->
+                <div class="flex justify-center animate-fadeIn">
+                    <div
+                        class="bg-white/30 backdrop-blur-lg p-6 rounded-lg shadow-xl w-full sm:w-3/4 lg:w-1/2 border border-white/20">
+                        <h3 class="text-xl font-semibold text-white">BACHELOR OF ENGINEERING | INFORMATION TECH | 2012</h3>
+                        <p class="text-white">KCE COEIT JALGAON | 67.40%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+<section id="experience" class="py-20 bg-dark">
+    <div class="container">
+        <h2 class="section-title">Experience</h2>
+        <div class="card-container">
+            <!-- Experience Card 1 -->
+            <div class="card">
+                <h3>SOFTWARE ENGINEER | WINJIT TECHNOLOGY PVT LTD | JAN 2022 - PRESENT</h3>
+                <ul>
+                    <li>Integrated the Equitas Credit Card module into the existing 'Selfie Loan' app.</li>
+                    <li>Developed the "Momentum Money" banking application using Flutter for both web and mobile
+                        platforms, employing a test-driven approach with BLoC and Clean Architecture patterns.</li>
+                    <li>Led the project as team lead for the Potholes Patrol app, overseeing the fine-tuning process for
+                        both Android and iOS using Flutter.</li>
+                    <li>Contributed to an Angular 17 web project focused on onboarding for the Momentum Money app.</li>
+                    <li>Conducted operational feasibility analysis, problem definition, requirement gathering, and
+                        solution development.</li>
+                    <li>Managed client communications, coding, implementation, code refactoring, and optimization.</li>
+                </ul>
+            </div>
+
+            <!-- Experience Card 2 -->
+            <div class="card">
+                <h3>SOFTWARE ENGINEER | LISANETWORK PVT LTD | APRIL 2021 – JAN 2022</h3>
+                <ul>
+                    <li>Launched the LisaNetwork App from scratch, a platform for property dealers with features like
+                        user profiles, posts, and real-time chat built with Firebase Firestore.</li>
+                    <li>Developed the LisaNetwork Web App using React and Redux, offering a minimalist user interface
+                        with equivalent features to the mobile app.</li>
+                    <li>Handled feature identification, design, coding, and manual testing while ensuring client
+                        communication and code optimization.</li>
+                </ul>
+            </div>
+
+            <!-- Experience Card 3 -->
+            <div class="card">
+                <h3>SOFTWARE ENGINEER | PEACEINFOTECH SERVICES PVT LTD | APRIL 2018 – DECEMBER 2020</h3>
+                <ul>
+                    <li>Developed and optimized the "Driver on Hire" app for a Mumbai-based client using Flutter.</li>
+                    <li>Built the "BeeTruk" delivery app for clients and drivers with real-time tracking features.</li>
+                    <li>Created the "Rudraksha Jewellers" web application using Angular 11, tailored for a jewelry
+                        store.</li>
+                    <li>Managed feature design, coding, testing, and client communication.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    
+
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold accent-text mb-6">Skills</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                <div>Flutter</div>
+                <div>ReactJS</div>
+                <div>Angular 17</div>
+                <div>Firebase</div>
+                <div>Git</div>
+                <div>Agile/Scrum</div>
+                <div>Material/Tailwind/Bootstrap</div>
+                <div>Bloc/Cubit</div>
+                <div>Provider</div>
+                <div>Riverpod</div>
+                <div>Clean Architecture</div>
+                <div>MVVM</div>
+                <div>Unit Testing</div>
+                <div>CI/CD Pipeline</div>
+                <div>NodeJs</div>
+                <div>Solid Principles</div>
+                <div>Restful API</div>
+                <div>TDD</div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold accent-text mb-6">Projects</h2>
+            <div class="space-y-8">
+                <div>
+                    <h3 class="text-xl font-semibold">Momentum Money App</h3>
+                    <p>A virtual banking app available on Android, iOS, and web, offering account management, rewards,
+                        and payment card services.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold">Equitas Credit Card Module</h3>
+                    <p>Integrated credit card functionality into an existing app, enhancing user engagement and
+                        transaction management.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold">Potholes Patrol</h3>
+                    <p>An app enabling road users to report and document potholes for better infrastructure management.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-[#112240]">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold accent-text mb-6">Contact</h2>
+            <p class="mb-4">Feel free to reach out for collaborations or queries:</p>
+            <ul>
+                <li>Email: <a href="mailto:aadil.ansari8@gmail.com" class="accent-text">aadil.ansari8@gmail.com</a></li>
+                <li>Phone: +91 7276640076</li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/aadil-ansari-5420a729/" class="accent-text"
+                        target="_blank">Aadil Ansari</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <footer class="py-6 bg-[#0a192f] text-center">
+        <p>&copy; 2025 Aadil Ansari. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>
